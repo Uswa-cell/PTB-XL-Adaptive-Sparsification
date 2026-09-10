@@ -18,14 +18,6 @@ decision criteria fixed before the confirmatory run.
 
 On PTB-XL, adaptive routing does **not** beat compute-matched static pruning.
 
-| Pre-specified gate | Result |
-|---|---|
-| Accuracy superiority vs Static-30 | Fails |
-| Accuracy non-inferiority vs Static-30 | Fails |
-| Latency tolerance | Fails — ~1.28x slower per record |
-| Measured energy tolerance | Fails — ~1.49x more energy per record |
-| Compute budget (MACs) | Passes |
-
 The router collapses: effectively only ~1.0–1.35 of 4 experts are used. Fewer
 MACs did not translate into fewer milliseconds or millijoules on the target
 hardware — which is the central negative result here, and the reason measured
